@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2d89ef" />
+    <link rel="manifest" href="/public/manifest.json" />
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <title>Balanço Patrimonial</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Balanço Patrimonial</h1>
+        <nav>
+          <button onclick="navigate('ativo')">Ativo</button>
+          <button onclick="navigate('passivo')">Passivo</button>
+          <button onclick="navigate('pl')">Patrimônio Líquido</button>
+          <button onclick="navigate('resultado')">Resultado</button>
+          <button onclick="navigate('indicadores')">Indicadores</button>
+        </nav>
+      </header>
+      <main id="content"></main>
+    </div>
+    <script src="/src/app.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/src/service-worker.js');
+      }
+    </script>
+  </body>
+</html>
